@@ -21,3 +21,28 @@
 feature:repo-add mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
 feature:install com.example.jowambi.features
 ```
+
+## Example Usage
+```
+$ bin/karaf
+        __ __                  ____
+       / //_/____ __________ _/ __/
+      / ,<  / __ `/ ___/ __ `/ /_
+     / /| |/ /_/ / /  / /_/ / __/
+    /_/ |_|\__,_/_/   \__,_/_/
+
+  Apache Karaf (4.2.8)
+
+Hit '<tab>' for a list of available commands
+and '[cmd] --help' for help on a specific command.
+Hit '<ctrl-d>' or type 'system:shutdown' or 'logout' to shutdown Karaf.
+
+karaf@root()> feature:repo-add mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
+Adding feature url mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
+karaf@root()> feature:install com.example.jowambi.features
+karaf@root()> jowambi:json
+{"one":"1","two":"2","three":"3"}
+karaf@root()> jowambi:groove
+foo
+karaf@root()>
+```

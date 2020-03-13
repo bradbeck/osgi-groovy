@@ -19,5 +19,28 @@
     <bundle start-level="35">mvn:org.codehaus.groovy/groovy-json/${groovy.version}</bundle>
     <bundle start-level="35">mvn:org.codehaus.groovy/groovy-jsr223/${groovy.version}</bundle>
     <bundle start-level="35">mvn:org.codehaus.groovy/groovy/${groovy.version}</bundle>
+
+<!--
+    <bundle start-level="36">wrap:mvn:org.codehaus.groovy/groovy/${groovy.version}$overwrite=merge&amp;SPI-Consumer=*&amp;SPI-Provider=*&amp;Require-Capability=osgi.serviceloader</bundle>
+
+Using the above wrapping for the groovy bundle appears to allow the SPI services from groovy-json and groovy-jsr223
+to work as expected in a vanilla karaf container. Although the jowambi:json command will still occasionally produce
+an error "Error executing command: Unable to load FastStringService".
+
+$ bin/karaf
+...
+  Apache Karaf (4.2.8)
+...
+
+karaf@root()> feature:repo-add mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
+Adding feature url mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
+karaf@root()> feature:install com.example.jowambi.features
+karaf@root()> jowambi:json
+{"one":"1","two":"2","three":"3"}
+karaf@root()> jowambi:groove
+foo
+karaf@root()>
+-->
+
   </feature>
 </features>
