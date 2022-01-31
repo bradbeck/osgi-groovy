@@ -12,18 +12,23 @@
     See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
 
 -->
+
 # Table of Contents
 
 * [Installing in Karaf](#installing-in-karaf)
+* [Example Usage](#example-usage)
+* [References](#references)
 
 ## Installing in Karaf
-```
+
+```bash
 feature:repo-add mvn:com.example.jowambi/com.example.jowambi.features/1.0.0-SNAPSHOT/xml/features
 feature:install com.example.jowambi.features
 ```
 
 ## Example Usage
-```
+
+```bash
 $ bin/karaf
         __ __                  ____
        / //_/____ __________ _/ __/
@@ -31,7 +36,7 @@ $ bin/karaf
      / /| |/ /_/ / /  / /_/ / __/
     /_/ |_|\__,_/_/   \__,_/_/
 
-  Apache Karaf (4.2.8)
+  Apache Karaf (4.3.6)
 
 Hit '<tab>' for a list of available commands
 and '[cmd] --help' for help on a specific command.
@@ -46,3 +51,7 @@ karaf@root()> jowambi:groove
 foo
 karaf@root()>
 ```
+
+## References
+
+* [Karaf Download](https://karaf.apache.org/download.html)
